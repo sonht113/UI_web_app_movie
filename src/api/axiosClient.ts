@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 const axiosClient = axios.create({
-  baseURL: 'http://localhost:8082/api/v1.0/admin',
+  baseURL: 'http://localhost:8081/api/v1.0/admin',
   headers: {
     'Content-Type': 'application/json',
   },

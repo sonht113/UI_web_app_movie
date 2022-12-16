@@ -143,9 +143,11 @@ const Home: React.FC<IProps> = ({ setActiveMenuNav }) => {
                     <CardActions
                       sx={{ display: 'flex', justifyContent: 'center' }}
                     >
-                      <Button variant='outlined' size='medium'>
-                        Xem thêm
-                      </Button>
+                      <Link to={`/movie/detail/${movie.id}`}>
+                        <Button variant='outlined' size='medium'>
+                          Xem thêm
+                        </Button>
+                      </Link>
                     </CardActions>
                   </Card>
                 </Grid>

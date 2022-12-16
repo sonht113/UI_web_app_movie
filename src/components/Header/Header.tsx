@@ -21,8 +21,15 @@ const useStyles = makeStyles(() => {
   });
 });
 
-const Header = () => {
+interface IProps {
+  user: any;
+  setUser: any;
+}
+
+const Header: React.FC<IProps> = ({ user, setUser }) => {
   const { search } = useStyles();
+
+  console.log(user);
 
   const [showClearIcon, setShowClearIcon] = useState('none');
 
@@ -77,16 +84,26 @@ const Header = () => {
             </FormControl>
           </Grid>
           <Grid item xs={4} alignItems='center'>
-            <Box
-              display={'flex'}
-              justifyContent='center'
-              alignItems={'center'}
-              gap={1}
-              sx={{ float: 'right', cursor: 'pointer' }}
+            <div
+              onClick={() => {
+                setUser({});
+              }}
             >
-              <AccountCircleIcon sx={{ fontSize: 30 }} />
-              <Typography sx={{ fontSize: 15 }}>Đăng nhập</Typography>
-            </Box>
+              <Box
+                display={'flex'}
+                justifyContent='center'
+                alignItems={'center'}
+                gap={1}
+                sx={{ float: 'right', cursor: 'pointer' }}
+              >
+                <AccountCircleIcon sx={{ fontSize: 30 }} />
+                {user.name ? (
+                  <Typography sx={{ fontSize: 15 }}>{user.name}</Typography>
+                ) : (
+                  <Typography sx={{ fontSize: 15 }}>Đăng nhập</Typography>
+                )}
+              </Box>
+            </div>
           </Grid>
         </Grid>
       </Box>

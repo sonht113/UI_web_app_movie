@@ -1,0 +1,28 @@
+.movie {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 5px;
+  gap: 10px;
+}
+.movies:hover {
+  background-color: rgb(223, 223, 223);
+}
+.theater:hover {
+  background-color: rgb(223, 223, 223);
+  color: black;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  background-color: red;
+}
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.time:hover {
+  border: 1px solid #f26b38;
+  color: #f26b38;
+}
